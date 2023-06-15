@@ -20,7 +20,7 @@ export class RainfallDialogComponent implements OnInit {
     name: string,
     data: CilacapModel[]
   };
-  formGroup: FormGroup
+  formGroup: FormGroup;
   rainfall: CilacapModel;
   isAlreadyExist: boolean = false;
   dataOptions = [

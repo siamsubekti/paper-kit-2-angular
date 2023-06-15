@@ -16,3 +16,18 @@
     }
   }
 }
+
+.container {
+  .card-forgot {
+    min-height: 360px;
+  }
+}
+
+.notification-error {
+  padding: 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+  i {
+    margin-top: 1px;
+  }
+}

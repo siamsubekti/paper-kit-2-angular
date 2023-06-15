@@ -46,6 +46,7 @@ export class LoginComponent implements OnInit, AfterViewInit {
             this.pattern.oneLowerCase = !oneLowerCase.test(res);
             this.pattern.oneDigits = !oneDigits.test(res);
             this.pattern.oneSpecialChar = !oneSpecialChar.test(res);
+            // tslint:disable-next-line:max-line-length
             if (!this.pattern.required && !this.pattern.minEight && !this.pattern.oneUpperCase && !this.pattern.oneLowerCase && !this.pattern.oneDigits && !this.pattern.oneSpecialChar) {
                 this.isValidBtn = true;
             } else {
@@ -71,7 +72,7 @@ export class LoginComponent implements OnInit, AfterViewInit {
                       const find = res.find((data) => {
                           return data.user === value.email && data.password === value.password;
                       });
-                      if (find) {
+                      if (find && find.status === 'active') {
                           this.userService.stateLogin(true);
                           localStorage.setItem('user_login', JSON.stringify(value))
                           this.router.navigate(['home']);

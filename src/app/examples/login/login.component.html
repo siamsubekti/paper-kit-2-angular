@@ -35,7 +35,7 @@
                                   <input type="password" maxlength="16" class="form-control"  formControlName="password" placeholder="Password" (focus)="focus1=true" (blur)="onBlur()" >
                               </div>
                               <small style="display: flex;flex-direction: column">
-                                  <span *ngIf="pattern.required">
+                                  <span *ngIf="pattern.required" class="text-white">
                                       Password must be field.
                                   </span>
                                   <span *ngIf="pattern.minEight" class="text-white">
@@ -55,7 +55,8 @@
                                   </span>
                               </small>
                               <span class="text-white" *ngIf="errorInvalid">Your email address or password has invalid. Please correct and try again.</span>
-                              <button class="btn btn-danger btn-block btn-round" [disabled]="formGroup.invalid || !isValidBtn">Login</button>
+                              <button class="btn btn-login btn-danger btn-block btn-round" [disabled]="formGroup.invalid || !isValidBtn">Login</button>
+                              <a routerLink="/forgot" class="btn btn-link btn-info btn-forgot">forgot password ?</a>
                           </form>
                       </div>
                     </div>

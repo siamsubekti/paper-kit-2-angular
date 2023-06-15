@@ -1,0 +1,28 @@
+.example-month-picker .mat-calendar-period-button {
+  pointer-events: none;
+}
+
+.example-month-picker .mat-calendar-arrow {
+  display: none;
+}
+
+
+.select-danger::ng-deep.ng-select-container {
+  border: 1px solid #dc3545!important;
+  box-shadow: none;
+}
+
+.notification-error {
+  padding: 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+  i {
+    margin-top: 1px;
+  }
+}
+
+.btn-danger:disabled {
+  color: #878484;
+  background-color: #bdaeaf;
+  border-color: #bdaeaf;
+}

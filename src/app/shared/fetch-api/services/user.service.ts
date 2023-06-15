@@ -16,6 +16,22 @@ export class UserService {
     return this.http.get<UserModel[]>(`${this.baseUrl}user`);
   }
 
+  getUserById(id: string): Observable<UserModel> {
+    return this.http.get<UserModel>(`${this.baseUrl}user/${id}`);
+  }
+
+  createUser(payload: UserModel): Observable<UserModel> {
+    return this.http.post<UserModel>(`${this.baseUrl}user`, payload);
+  }
+
+  updateUser(payload: UserModel): Observable<UserModel> {
+    return this.http.put<UserModel>(`${this.baseUrl}user/${payload.id}`, payload)
+  }
+
+  deleteUser(id: string): Observable<Object> {
+    return this.http.delete(`${this.baseUrl}user/${id}`);
+  }
+
   stateLogin(value: boolean) {
     this.isLoggedIn.next(value);
   }

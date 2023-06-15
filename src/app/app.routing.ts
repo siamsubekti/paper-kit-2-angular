@@ -13,12 +13,15 @@ import { RainfallComponent } from 'app/components/rainfall/rainfall.component';
 import { AboutComponent } from 'app/components/about/about.component';
 import { WlaharCilacapComponent } from 'app/components/wlahar-cilacap/wlahar-cilacap.component';
 import { TelajasariComponent } from 'app/components/telajasari/telajasari.component';
+import { ManageUsersComponent } from 'app/components/manage-users/manage-users.component';
+import { ForgotComponent } from 'app/examples/forgot/forgot.component';
 
 const routes: Routes =[
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'home',             component: ComponentsComponent },
     { path: 'user-profile',     component: ProfileComponent },
     { path: 'login',           component: LoginComponent },
+    { path: 'forgot',           component: ForgotComponent },
     { path: 'landing',          component: LandingComponent },
     { path: 'nucleoicons',      component: NucleoiconsComponent },
     { path: 'all-component', component: AllComponentComponent },
@@ -26,13 +29,14 @@ const routes: Routes =[
     { path: 'rainfall', component: RainfallComponent },
     { path: 'about', component: AboutComponent },
     { path: 'telajasari-data', component: TelajasariComponent },
+    { path: 'users', component: ManageUsersComponent },
 ];
 
 @NgModule({
   imports: [
     CommonModule,
     BrowserModule,
-    RouterModule.forRoot(routes,{
+    RouterModule.forRoot(routes, {
       useHash: true
     })
   ],

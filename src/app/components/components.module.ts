@@ -36,6 +36,8 @@ import { TelajasariService } from 'app/shared/fetch-api/services/telajasari.serv
 import { UserService } from 'app/shared/fetch-api/services/user.service';
 import { DigitOnlyDirective } from 'app/shared/directive/digit-only.directive';
 import { NumberIndexPipe } from 'app/shared/pipe/number-index.pipe';
+import { ManageUsersComponent } from 'app/components/manage-users/manage-users.component';
+import { UserDialogComponent } from 'app/shared/dialog/user-dialog/user-dialog.component';
 
 @NgModule({
     imports: [
@@ -71,9 +73,11 @@ import { NumberIndexPipe } from 'app/shared/pipe/number-index.pipe';
     RainfallDialogComponent,
     ClimatologyDialogComponent,
     DialogBasicComponent,
+    UserDialogComponent,
     AboutComponent,
     TelajasariComponent,
-    WlaharCilacapComponent
+    WlaharCilacapComponent,
+    ManageUsersComponent,
   ],
   providers: [RainfallService, CilacapService, UserService],
   entryComponents: [NgbdModalContent],

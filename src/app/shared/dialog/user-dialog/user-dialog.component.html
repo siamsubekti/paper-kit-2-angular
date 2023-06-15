@@ -1,0 +1,83 @@
+<div class="modal-header">
+  <h5 class="modal-title" id="exampleModalLabel">{{ title }} User</h5>
+  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <span aria-hidden="true" (click)="activeModal.close('close')">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <div class="notification-error bg-warning d-flex align-items-center w-100 mb-3" *ngIf="isAlreadyExist">
+    <i class="fa fa-exclamation-circle"></i>&nbsp;
+    <span>Username is already exist.</span>
+  </div>
+  <form [formGroup]="formGroup" class="w-100">
+    <div class="form-group">
+      <label>Username:</label>
+      <input type="text" class="form-control" placeholder="Input Username" formControlName="user"
+             [ngClass]="{
+              'border border-danger' : (formGroup.get('user').invalid && (formGroup.get('user').dirty || formGroup.get('user').touched))
+             }"
+      >
+      <small *ngIf="formGroup.get('user').invalid && (formGroup.get('user').dirty || formGroup.get('user').touched)">
+        <span class="text-danger" *ngIf="formGroup.get('user').errors?.required">
+          Field username must be filled.
+        </span>
+      </small>
+    </div>
+    <div class="form-group">
+      <label>Password:</label>
+      <input type="text" class="form-control" placeholder="Input Password" formControlName="password"
+             [ngClass]="{
+              'border border-danger' : pattern.required || pattern.minEight || pattern.oneUpperCase
+              || pattern.oneLowerCase || pattern.oneDigits || pattern.oneSpecialChar
+             }"
+      >
+      <small style="display: flex;flex-direction: column">
+        <span *ngIf="pattern.required" class="text-danger">
+            Password must be field.
+        </span>
+        <span *ngIf="pattern.minEight" class="text-danger">
+            Password minimum 8 characters.
+        </span>
+        <span *ngIf="pattern.oneUpperCase" class="text-danger">
+            Password must be at least one uppercase.
+        </span>
+        <span *ngIf="pattern.oneLowerCase" class="text-danger">
+            Password must be at least one lowercase.
+        </span>
+        <span *ngIf="pattern.oneDigits" class="text-danger">
+            Password must be at least one digits.
+        </span>
+        <span *ngIf="pattern.oneSpecialChar" class="text-danger">
+            Password must be at least one special characters
+        </span>
+      </small>
+    </div>
+    <div class="form-group">
+      <label>Select Status: <strong class="text-danger">*</strong></label>
+      <ng-select
+        [items]="dataOptions"
+        bindLabel="name"
+        bindValue="name"
+        formControlName="status"
+        placeholder="Select Status"
+        [ngClass]="{ 'select-danger' : (formGroup.get('status').invalid && (formGroup.get('status').dirty || formGroup.get('status').touched))}"
+      ></ng-select>
+      <small *ngIf="formGroup.get('status').invalid && (formGroup.get('status').dirty || formGroup.get('status').touched)">
+        <span class="text-danger" *ngIf="formGroup.get('status').errors?.required">
+          Field status must be filled.
+        </span>
+      </small>
+    </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <div class="left-side">
+    <button type="button" class="btn btn-default btn-link" (click)="save(formGroup.value)"
+            [disabled]="!formGroup.valid">Save
+    </button>
+  </div>
+  <div class="divider"></div>
+  <div class="right-side">
+    <button type="button" class="btn btn-danger btn-link" (click)="activeModal.close('Close click')">Back</button>
+  </div>
+</div>
