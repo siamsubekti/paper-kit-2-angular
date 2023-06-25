@@ -59,7 +59,8 @@ export class TelajasariComponent implements OnInit {
     })
     this.modalConfirm.componentInstance.type = {
       name: 'telajasari',
-      data: this.data
+      data: this.data,
+      type: 'Add'
     };
   }
 
@@ -130,7 +131,8 @@ export class TelajasariComponent implements OnInit {
           this.modalRefUpdate.componentInstance.dataT = res;
           this.modalRefUpdate.componentInstance.type = {
             name: 'telajasari',
-            data: this.data
+            data: this.data,
+            type: 'Update'
           };
         }
       })

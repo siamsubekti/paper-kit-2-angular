@@ -76,6 +76,9 @@ export class UserDialogComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit(): void {
+    if (this.data) {
+      console.log('on init ')
+    }
     this.initForm();
     if (this.data) {
       this.setForm();
@@ -124,8 +127,10 @@ export class UserDialogComponent implements OnInit, AfterViewInit {
   }
 
   updateUser(payload: UserModel) {
-    const filterName = this.users.filter(fil => fil.user !== payload.user);
+    const filterName = this.users.filter(fil => fil.user !== this.data.user);
+    console.log('filter name ', filterName)
     const find = filterName.find(val => val.user === payload.user);
+    console.log('find ', find)
     if (!find) {
       this.userService.updateUser(payload)
         .subscribe({

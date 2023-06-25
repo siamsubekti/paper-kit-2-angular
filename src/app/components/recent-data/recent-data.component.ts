@@ -53,7 +53,8 @@ export class RecentDataComponent implements OnInit {
               day: '1',
               month: item.month
             }
-          })
+          });
+          this.rainfalls.sort((a, b) => +b.year - +a.year);
         }
       })
   }
@@ -71,7 +72,8 @@ export class RecentDataComponent implements OnInit {
               day: '1',
               month: item.month
             }
-          })
+          });
+          this.tmaResponse.sort((a, b) => +b.year - +a.year);
         }
       })
   }

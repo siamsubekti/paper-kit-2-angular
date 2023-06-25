@@ -2775,7 +2775,7 @@
       "year": "2015",
       "month": "1",
       "dewpoint_2m_temperature": "23.265",
-      "maximum_2m_air_temperature": "31.109",
+      "maximum_2m_air_temperature": "31.110",
       "mean_2m_air_temperature": "26.054",
       "minimum_2m_air_temperature": "23.044",
       "total_precipitation": "0.344",
@@ -3538,16 +3538,29 @@
     },
     {
       "id": "dc4c5ee0-fc14-4dc3-a231-1a0cbb4342c7",
+      "no": 60,
       "year": "2019",
       "month": "12",
       "dewpoint_2m_temperature": "23.741",
       "maximum_2m_air_temperature": "32.110",
       "mean_2m_air_temperature": "26.722",
-      "minimum_2m_air_temperature": "23.491",
+      "minimum_2m_air_temperature": "23.492",
       "total_precipitation": "0.251",
       "u_component_of_wind_10m": "0.088",
-      "v_component_of_wind_10m": "0.295",
-      "no": 60
+      "v_component_of_wind_10m": "0.295"
+    },
+    {
+      "id": "51afbe73-7128-4af7-9b41-dcc85e9f9053",
+      "no": 61,
+      "year": "2023",
+      "month": "1",
+      "dewpoint_2m_temperature": "1",
+      "maximum_2m_air_temperature": "1",
+      "mean_2m_air_temperature": "1",
+      "minimum_2m_air_temperature": "1",
+      "total_precipitation": "1",
+      "u_component_of_wind_10m": "1",
+      "v_component_of_wind_10m": "1"
     }
   ],
   "telajasari": [
@@ -3709,16 +3722,16 @@
     },
     {
       "id": "a93b71ae-212f-4183-b763-4be27e6d6df4",
+      "no": 13,
       "year": "2016",
       "month": "1",
-      "dewpoint_2m_temperature": "22.930",
+      "dewpoint_2m_temperature": "22.931",
       "maximum_2m_air_temperature": "31.420",
       "mean_2m_air_temperature": "25.816",
       "minimum_2m_air_temperature": "22.148",
       "total_precipitation": "0.347",
-      "u_component_of_wind_10m": "-0.176",
-      "v_component_of_wind_10m": "-0.303",
-      "no": 13
+      "u_component_of_wind_10m": "-0.1763",
+      "v_component_of_wind_10m": "-0.303"
     },
     {
       "id": "3a5780e4-ec68-4088-9b37-a66db2264983",
@@ -4335,7 +4348,7 @@
       "id": "7eaf8b90-f321-4429-92d7-9da16b19d046",
       "no": 61,
       "year": "2020",
-      "month": "01",
+      "month": "1",
       "dewpoint_2m_temperature": "1",
       "maximum_2m_air_temperature": "1",
       "mean_2m_air_temperature": "1",
@@ -4374,9 +4387,9 @@
       "id": "aeadf824-d190-48b2-b541-4e77c4c7b4ca",
       "no": 64,
       "year": "2014",
-      "month": "01",
+      "month": "1",
       "dewpoint_2m_temperature": "1",
-      "maximum_2m_air_temperature": "1",
+      "maximum_2m_air_temperature": "12",
       "mean_2m_air_temperature": "1",
       "minimum_2m_air_temperature": "1",
       "total_precipitation": "1",
@@ -4401,7 +4414,7 @@
       "no": 66,
       "year": "2014",
       "month": "2",
-      "dewpoint_2m_temperature": "1",
+      "dewpoint_2m_temperature": "12",
       "maximum_2m_air_temperature": "1",
       "mean_2m_air_temperature": "1",
       "minimum_2m_air_temperature": "1",
@@ -4415,6 +4428,12 @@
       "id": "1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed",
       "user": "admin",
       "password": "W!snu123",
+      "status": "active"
+    },
+    {
+      "id": "151c4344-36f4-44ca-8261-e440156de1f5",
+      "user": "admin2",
+      "password": "P@ssw0rd",
       "status": "active"
     }
   ]

@@ -47,7 +47,8 @@ export class WlaharCilacapComponent implements OnInit {
     });
     this.modalConfirm.componentInstance.type = {
       name: 'cilacap',
-      data: this.data
+      data: this.data,
+      type: 'Add'
     };
   }
 
@@ -118,7 +119,8 @@ export class WlaharCilacapComponent implements OnInit {
           this.modalRefUpdate.componentInstance.data = res;
           this.modalRefUpdate.componentInstance.type = {
             name: 'cilacap',
-            data: this.data
+            data: this.data,
+            type: 'Update'
           };
         }
       })

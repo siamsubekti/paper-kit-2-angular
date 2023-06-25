@@ -18,14 +18,15 @@ export class RainfallDialogComponent implements OnInit {
   @Input() dataT: CilacapModel;
   @Input() type: {
     name: string,
-    data: CilacapModel[]
+    data: CilacapModel[],
+    type: string
   };
   formGroup: FormGroup;
   rainfall: CilacapModel;
   isAlreadyExist: boolean = false;
   dataOptions = [
     {
-      id: '01',
+      id: '1',
       name: 'January'
     },
     {
@@ -200,7 +201,8 @@ export class RainfallDialogComponent implements OnInit {
 
   updateTelajasari(payload: CilacapModel) {
     payload.no = this.dataT.no;
-    const find = this.type.data.find(value => +value.month === (+payload.month - 1) && value.year === payload.year);
+    const filter = this.type.data.filter((val) => val.month !== this.dataT.month && val.year !== this.dataT.year);
+    const find = filter.find(value => +value.month === (+payload.month - 1) && value.year === payload.year);
     if (!find) {
       this.telajasariService.updateTelajasari(payload)
           .subscribe({
@@ -218,7 +220,8 @@ export class RainfallDialogComponent implements OnInit {
   }
 
   updateRainfall(payload: CilacapModel) {
-    const find = this.type.data.find(value => +value.month === (+payload.month - 1) && value.year === payload.year);
+    const filter = this.type.data.filter((val) => val.month !== this.data.month && val.year !== this.data.year);
+    const find = filter.find(value => +value.month === (+payload.month - 1) && value.year === payload.year);
     if (!find) {
       payload.no = this.data.no;
       this.cilacapService.updateCilacap(payload)
